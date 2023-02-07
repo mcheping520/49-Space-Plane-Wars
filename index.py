@@ -9,11 +9,11 @@ canvas = pygame.display.set_mode((480, 650))
 canvas.fill((255, 255, 255))
 
 # 设置窗口标题
-pygame.display.set_caption("飞机大战")
-bg = pygame.image.load("images/bg1.png")
-enemy1 = pygame.image.load("images/enemy1.png")
-enemy2 = pygame.image.load("images/enemy2.png")
-enemy3 = pygame.image.load("images/enemy3.png")
+pygame.display.set_caption("49宇宙飞机大战")
+bg = pygame.image.load("images/background.png")
+enemy1 = pygame.image.load("images/TempNineTeen.png")
+enemy2 = pygame.image.load("images/KerTesz.png")
+enemy3 = pygame.image.load("images/Astan.png")
 b = pygame.image.load("images/bullet1.png")
 h = pygame.image.load("images/hero.png")
 #开始游戏图片
@@ -21,7 +21,7 @@ startgame=pygame.image.load("images/startGame.png")
 #logo图片
 logo=pygame.image.load("images/LOGO.png")
 #暂停图片
-pause = pygame.image.load("images/game_pause_nor.png")
+pause = pygame.image.load("images/FortyNine.png")
 
 # 添加时间间隔的方法
 def isActionTime(lastTime, interval):
@@ -154,7 +154,7 @@ def componentEnter():
         GameVar.enemies.append(Enemy(x1, 0, 50, 68, 2, 3, 5, enemy2))
     elif n == 9: 
         if len(GameVar.enemies) == 0 or GameVar.enemies[0].type != 3: 
-            GameVar.enemies.insert(0, Enemy(x2, 0, 100, 153, 3, 10, 20, enemy3))
+            GameVar.enemies.insert(0, Enemy(x2, 0, 50, 68, 3, 10, 20, enemy3))
 
 # 创建画组件方法
 def componentPaint():
